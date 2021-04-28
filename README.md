@@ -1,5 +1,10 @@
-# Autoencoder
-Autoencoder에 대한 개념을 공부하고
-[Tensorflow2.0 튜토리얼](https://www.tensorflow.org/tutorials/generative/autoencoder) Autoencoder를 mnist dataset을 이용하여 구현하였습니다.
+# AutoEncoder
+Autoencoder는 대표적인 Unsupervised Learning의 한 종류로 dimensionality reduction이나 feature extraction에서 많이 사용되고 있습니다. AE의 기본적인 구조는 다음과 같습니다.
 
-또한 파생되어 다른 프로젝트도 진행하였습니다.
+![image](https://user-images.githubusercontent.com/83156421/116395911-acd60a00-a85f-11eb-84ec-11c0c5a178bb.png)
+
+### 1. Tensorflow2.0_autoencoder_tutorial_mnist
+Tensorflow2.0 autoencoder를 그대로 구현하였습니다.
+
+### 2. Stacked Autoencoders with classify fashoin MNIST data
+autoencoder를 이용하여 classification model을 만들었습니다. Convolution Network나 다른 기법들(batch norm, drop out)등을 사용하지 않고도 97%의 정확도의 결과를 보일 수 있었습니다.
