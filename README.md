@@ -1,4 +1,5 @@
-
+# Autoencoder
+Autoencoder는 대표적인 Unsupervised Learning의 한 종류로 dimensionality reduction이나 feature extraction에서 많이 사용되고 있습니다. AE의 기본적인 구조는 다음과 같습니다.
 
 ### 1. Tensorflow2.0_autoencoder_tutorial_mnist
 Tensorflow2.0 autoencoder를 그대로 구현하였습니다.
