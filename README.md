@@ -9,7 +9,7 @@ Autoencoder는 대표적인 Unsupervised Learning의 한 종류 입니다. AE의
 
 ![image](https://user-images.githubusercontent.com/83156421/116502343-37654a80-a8ee-11eb-9be1-b12aae85bf09.png)
 
-위의 수식은 오토인코더의 Loss function 입니다. A와 B는 각각 오토인코더의 인코더와 디코더를 의미한다. 즉 오토인코더의 입력값으로 x값이 들어갈 때의 출력값 x_hat과 원본 x와의 차이를 가장 작게 만드는 A와 B를 찾는 것 입니다. 원본 데이터를 재구성하기 때문에 오토인코더의 Loss를 reconstruction loss라고 하며 보통 L2-norm을 사용한다고 합니다.
+위의 수식은 오토인코더의 Loss function 입니다. A와 B는 각각 오토인코더의 인코더와 디코더를 의미합니다. 즉 오토인코더의 입력값으로 x값이 들어갈 때의 출력값 x_hat과 원본 x와의 차이를 가장 작게 만드는 A와 B를 찾는 것 입니다. 원본 데이터를 재구성하기 때문에 오토인코더의 Loss를 reconstruction loss라고 하며 보통 L2-norm을 사용합니다.
 
 ## Example code
 ### 1. Tensorflow2.0_autoencoder_tutorial_mnist
