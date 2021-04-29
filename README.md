@@ -7,7 +7,7 @@ Autoencoder는 대표적인 Unsupervised Learning의 한 종류 입니다. AE의
 
 인코더와 디코더의 네트워크 모든 구조를 Neural network 로만 구성한다면 일반적인 DNN과 같습니다. 꼭 Neural network만 사용할 필요가 없고, CNN을 사용할 수도 있습니다. CNN에 대한 사용은 1번 예제 코드에 있습니다. 또한 Activation Function 없이 사용하는 Autoencoder는 Linear Autoencoder라고 부르고 있습니다. 이 Linear Autoencoder는 차원 압축에서 많이 사용되는 PCA와 같은 역할을 합니다. 오토인코더는 단순한 구조처럼 보이지만, 입력 데이터에 noise를 추가하고, 원본 입력이 출력되도록 하는 Denoising 효과도 가지고 있습니다. 이를 Denoising Autoencoder라고 합니다. 마찬가지로 1번 예제에서 MNIST 데이터에 Gaussian 분포의 Random noise를 더해주고 다시 원본을 출력하도록 만드는 모델을 학습시키는 코드가 있습니다. 이외에도 sparse 오토인코더, Variational Autoencoder 등이 있으며 다른 repo에서 다룰 예정입니다. 
 
-![image](https://user-images.githubusercontent.com/83156421/116499216-99ba4d00-a8e6-11eb-91e6-068977cbb3bc.png)
+![image](https://user-images.githubusercontent.com/83156421/116502343-37654a80-a8ee-11eb-9be1-b12aae85bf09.png)
 
 위의 수식은 오토인코더의 Loss function 입니다. A와 B는 각각 오토인코더의 인코더와 디코더를 의미한다. 즉 오토인코더의 입력값으로 x값이 들어갈 때의 출력값 x_hat과 원본 x와의 차이를 가장 작게 만드는 A와 B를 찾는 것 입니다. 원본 데이터를 재구성하기 때문에 오토인코더의 Loss를 reconstruction loss라고 하며 보통 L2-norm을 사용한다고 합니다.
 
