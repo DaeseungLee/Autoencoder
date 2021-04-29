@@ -6,7 +6,7 @@ from tensorflow.keras import Sequential, layers, Model, losses
 from tensorflow.keras.datasets import fashion_mnist
 
 # load fashion mnist data
-(x_data, y_data), (x_test, y_test) = fashion_mnist.load_data()
+(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
 
 # hyperparameter
 epochs = 400
@@ -17,8 +17,8 @@ n_classes = 10
 batch_size = 256
 
 # data normalize
-x_data = x_data / 255
-x_test = y_data / 255
+x_train = x_train / 255
+x_test = x_test / 255
 
 # reconstruction model (encoder, decoder)
 reconstructor = Sequential([
@@ -58,10 +58,30 @@ model.compile(
 )
 
 model.fit(
-    x_data,
-    {"reconstruction" : x_data, "classification" : y_data},
+    x_train,
+    {"reconstruction" : x_train, "classification" : y_train},
     epochs=40,
     batch_size=32,
 )
 
+# classification evaluate
+model.evaluate(x_test,[x_test, y_test])
 
+# reconsturct images visualization
+
+n = 10
+plt.figure(figsize=(20,4))
+for i in range(n):
+  ax = plt.subplot(2, n, i+1)
+  plt.imshow(x_test[i])
+  plt.gray()
+  ax.get_xaxis().set_visible(False)
+  ax.get_yaxis().set_visible(False)
+  plt.title("Original")
+
+  ax = plt.subplot(2, n, n+i+1)
+  plt.imshow(reconstruct_imgs[i])
+  plt.gray()
+  ax.get_xaxis().set_visible(False)
+  ax.get_yaxis().set_visible(False)
+  plt.title("Reconstruct")
