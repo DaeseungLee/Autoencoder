@@ -22,11 +22,11 @@ Tensorflow2.0 autoencoder를 그대로 구현하였습니다.
 ![image](https://user-images.githubusercontent.com/83156421/116503964-45b56580-a8f2-11eb-95df-9da044768141.png)
 
 ### 2. Stacked Autoencoders with classify fashoin MNIST data
-autoencoder를 이용하여 classification model을 만들었습니다. Convolution Network나 다른 기법들(batch norm, drop out)등을 사용하지 않고도 97%의 정확도의 결과를 보일 수 있었습니다.
-이 구조의 Loss function은 다음과 같습니다.
+autoencoder를 이용하여 classification model을 만들었습니다. Convolution Network나 다른 기법들(batch norm, drop out)등을 사용하지 않고도 ***97%의 정확도***의 결과를 보일 수 있었습니다. Reconstruction한 결과는 다음과 같습니다.
 
+![image](https://user-images.githubusercontent.com/83156421/116974487-2d31ba80-acf9-11eb-910e-b32db1539fd9.png)
 
-
+기존의 이미지보다 Noise가 좀 더 있는 상태인데 classification Layer로 부터의 gradinet가 반영되서 기존 Autoencoder만 사용할 때 보다 원본 이미지의 복원 성능이 떨어졌습니다.
 
 
 
